@@ -24,16 +24,9 @@ let ultPromedio = JSON.parse(localStorage.getItem("promedios"))
 
 btnLastProm.addEventListener("click", function () {
 
-  if (document.getElementById("h3prom") == null) {
-    let DivInsProm = document.querySelector("#DivInsProm")
-    let h3Prom = document.createElement("h3")
-    h3Prom.id = "h3prom"
-    h3Prom.textContent = ultPromedio
-    DivInsProm.appendChild(h3Prom)
-  }
-  else {
+  if (ultPromedio == undefined) {
     Toastify({
-      text: "Ultimo promedio ya mostrado",
+      text: "Inicie sesión y calcule un promedio primero antes de utilizar este botón",
       duration: 2500,
       newWindow: true,
       gravity: "top", // `top` or `bottom`
@@ -46,8 +39,35 @@ btnLastProm.addEventListener("click", function () {
       onClick: function () { } // Callback after click
     }).showToast();
   }
-
+  else {
+    if (document.getElementById("h3prom") == null) {
+      let DivInsProm = document.querySelector("#DivInsProm")
+      let h3Prom = document.createElement("h3")
+      h3Prom.id = "h3prom"
+      h3Prom.textContent = ultPromedio
+      DivInsProm.appendChild(h3Prom)
+    }
+    else {
+      Toastify({
+        text: "Ultimo promedio ya mostrado",
+        duration: 2500,
+        newWindow: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "rgb(255,0,0)",
+          background: "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(166,27,27,1) 100%, rgba(166,27,27,1) 100%)"
+        },
+        onClick: function () { } // Callback after click
+      }).showToast();
+    }
+  }
 })
+
+
+
+
 
 
 
