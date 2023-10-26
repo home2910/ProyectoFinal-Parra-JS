@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Login</title>
+    <style>
+      #body-login {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #historial {
+        display: flex;
+        flex-direction: column;
+      }
+      #DivInsProm {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="body-login">
+    <form id="loginForm">
+      <h1>Iniciar Sesión</h1>
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" required />
+
+      <br />
+      <br />
+
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="Clave" required />
+
+      <br />
+      <br />
+
+      <button type="submit">Iniciar Sesión</button>
+
+      <br />
+      <br />
+
+      <p>¿Aún no estas registrado? <a href="registro.html">Registrate</a></p>
+    </form>
+
+    <section id="historial">
+      <h2>Ultimo promedio calculado</h2>
+      <div id="DivInsProm"></div>
+      <button id="addLastProm">Ver ultimo promedio</button>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

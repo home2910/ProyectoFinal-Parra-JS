@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Notas</title>
+    <style>
+      * {
+        margin: 10px;
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sect-title">
+      <h1>Calcule su promedio</h1>
+    </section>
+
+    <section id="sectNotas">
+      <label for="nota1">Ingrese su primer nota:</label>
+      <input type="number" value="0" min="0" max="10" id="nota1" />
+
+      <br />
+      <br />
+
+      <label for="nota2">Ingrese su segunda nota:</label>
+      <input type="number" value="0" min="0" max="10" id="nota2" />
+
+      <br />
+      <br />
+    </section>
+
+    <div id="resultado"></div>
+
+    <br />
+
+    <button id="addInput">Agregar nota</button>
+    <button id="rmNotas">Remover nota</button>
+    <br />
+
+    <button id="calcular">Calcular</button>
+    <button id="agNotas">Calcular 3 notas</button>
+
+    <br />
+
+    <a href="index.html">Volver</a>
+
+    <br />
+
+    <button id="clima">Ver la temperatura y la ubicación</button>
+
+    <div id="weather-info"></div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./notas.js"></script>
+  </body>
+</html>
