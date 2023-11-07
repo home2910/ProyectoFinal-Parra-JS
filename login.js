@@ -13,7 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
       loginForm.reset()
       window.location.href = "notas.html"
     } else {
-
+      Toastify({
+        text: "Usuario no registrado",
+        duration: 2500,
+        newWindow: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "rgb(255,0,0)",
+          background: "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(166,27,27,1) 100%, rgba(166,27,27,1) 100%)"
+        },
+        onClick: function () { } // Callback after click
+      }).showToast();
     }
   })
 })
